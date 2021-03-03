@@ -32,7 +32,7 @@ const StoryDetail = ({story}) => {
     })
 
   return (
-    <ul>
+    <ul className="comment">
       {commentNodes}
     </ul>
   )
