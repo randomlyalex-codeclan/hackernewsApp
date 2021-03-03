@@ -5,7 +5,11 @@ const StoryItem = ({story, index}) => {
 
   const [showStoryDetail, setShowStoryDetail] = useState(false);
 
-  const handleClick = () => setShowStoryDetail(!showStoryDetail);
+  const handleClick = () => {
+    if(story.kids){
+      setShowStoryDetail(!showStoryDetail);
+    }
+  }
 
   return (
     <>

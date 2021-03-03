@@ -21,7 +21,10 @@ const StoryDetail = ({story}) => {
     }
 
     useEffect(() => {
-      concatPromiseComments()
+      concatPromiseComments() 
+      return () => {
+        console.log("cleanup")
+      }
     }, [])
 
     const commentNodes = comments.map((comment) => {
