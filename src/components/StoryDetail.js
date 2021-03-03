@@ -24,10 +24,14 @@ const StoryDetail = ({story}) => {
       concatPromiseComments()
     }, [])
 
+    const commentNodes = comments.map((comment) => {
+      return <li key={comment.id}>{comment.text}</li>
+    })
+
   return (
-    <div>
-      <p>ill show myslef</p>
-    </div>
+    <ul>
+      {commentNodes}
+    </ul>
   )
 }
 
