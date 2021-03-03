@@ -8,7 +8,8 @@ const Header = ({onSelectChange}) => {
   return (
     <>
     
-     <div>
+      <h1>Hacker News</h1>
+     <div className="nav">
        <ul>
          <li>
           <h4  onClick={() => onSelectChange("topstories")}>Top Stories</h4>   {/*/v0/topstories*/}
