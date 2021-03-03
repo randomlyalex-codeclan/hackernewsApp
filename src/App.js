@@ -12,7 +12,7 @@ function App() {
   let storyIds = [];
 
 
-  // first fetch gets us the id numbers that we are going to use in the second fetch
+  // first fetch gets us the id numbers that we are going to use in the second fetch 
   const getStories = () => {
     fetch(`https://hacker-news.firebaseio.com/v0/topstories.json? 
     print=pretty&orderBy="$key"&limitToFirst=30`)
@@ -47,7 +47,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <StoryList/>
+      <StoryList stories={stories}/>
     </div>
     
   );

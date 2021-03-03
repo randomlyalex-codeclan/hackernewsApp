@@ -1,11 +1,14 @@
 import React from 'react';
 import StoryItem from '../components/StoryItem';
 
-const StoryList = () => {
+const StoryList = ({stories}) => {
+
+  const storyNodes = stories.map((story, index) => {
+    return <StoryItem key={story.id} index={index + 1} story={story}></StoryItem>
+  })
   return(
     <div>
-      <p>This will hold a list of stories</p>
-      <StoryItem/>
+      {storyNodes}
     </div>
   )
 }
