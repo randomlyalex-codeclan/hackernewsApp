@@ -1,10 +1,30 @@
 import React from 'react';
 
-const Header = () => {
+
+const Header = ({onSelectChange}) => {
+
+  
+
   return (
-    <div>
-      <h4>this is our header</h4>
-    </div>
+    <>
+    
+     <div>
+       <ul>
+         <li>
+          <h4  onClick={() => onSelectChange("topstories")}>Top Stories</h4>   {/*/v0/topstories*/}
+         </li>
+         <li>
+           <h4  onClick={() => onSelectChange("newstories")}>New Stories</h4>    {/*/v0/newstories*/}
+         </li>
+         <li>
+           <h4  onClick={() => onSelectChange("jobstories")}>Jobs</h4>   {/*/v0/jobstories*/}
+         </li>
+         <li>
+            <h4 onClick={() => onSelectChange("beststories")}>Best</h4>  {/*/v0/beststories */}
+         </li>
+       </ul>
+     </div>
+    </>
   )
 }
 
