@@ -14,7 +14,8 @@ function App() {
 
   // first fetch gets us the id numbers that we are going to use in the second fetch
   const getStories = () => {
-    fetch("https://hacker-news.firebaseio.com/v0/topstories.json")
+    fetch(`https://hacker-news.firebaseio.com/v0/topstories.json? 
+    print=pretty&orderBy="$key"&limitToFirst=30`)
     .then(res => res.json())
     .then((data) => storyIds = data)
     .then(() => concatPromiseStories());   
